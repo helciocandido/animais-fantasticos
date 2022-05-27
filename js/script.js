@@ -1,8 +1,8 @@
 import ScrollSuave from "./modules/scroll-suave.js";
 import Accordion from "./modules/accordion-animacao.js";
-
 import TabNav from "./modules/tabnav.js";
-import initHandleText from "./modules/handle-text.js";
+import HandleText from "./modules/handle-text.js";
+
 import initModal from "./modules/modal.js";
 import initToolTip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
@@ -25,7 +25,9 @@ const tabNav = new TabNav(
 );
 tabNav.init();
 
-initHandleText();
+const handleText = new HandleText('[data-handleText="text"]', "textomaior");
+handleText.init();
+
 initModal();
 initToolTip();
 initDropDownMenu();

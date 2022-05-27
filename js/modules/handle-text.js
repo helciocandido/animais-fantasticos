@@ -1,25 +1,27 @@
-export default function initHandleText() {
-  const textP = document.querySelectorAll("p");
-  const textDt = document.querySelectorAll("dt");
-  const textDd = document.querySelectorAll("dd");
-  const textLi = document.querySelectorAll("li");
+export default class HandleText {
+  constructor(textSelector, textClass) {
+    this.text = document.querySelectorAll(textSelector);
+    this.textClass = textClass;
+  }
 
-  function handleText(event) {
-    if (event.key === "t") {
-      textP.forEach((text) => {
-        text.classList.toggle("textomaior");
-      });
-      textDt.forEach((text) => {
-        text.classList.toggle("textomaior");
-      });
-      textDd.forEach((text) => {
-        text.classList.toggle("textomaior");
-      });
-      textLi.forEach((text) => {
-        text.classList.toggle("textomaior");
+  //Verifica se a tecla "t" ou "T" foi pressionada e adiciona a classe ao texto
+  handleText(event) {
+    if (event.key === "t" || event.key === "T") {
+      this.text.forEach((text) => {
+        text.classList.toggle(this.textClass);
       });
     }
   }
 
-  window.addEventListener("keydown", handleText);
+  //Adiciona o evento ao objeto window
+  addHandleTextEvent(event) {
+    window.addEventListener("keydown", () => this.handleText(window.event));
+  }
+
+  //Inicia verificando se existe texto a ser selecionado;
+  init() {
+    if (this.text.length) {
+      this.addHandleTextEvent();
+    }
+  }
 }

@@ -2,8 +2,8 @@ import ScrollSuave from "./modules/scroll-suave.js";
 import Accordion from "./modules/accordion-animacao.js";
 import TabNav from "./modules/tabnav.js";
 import HandleText from "./modules/handle-text.js";
-
 import Modal from "./modules/modal.js";
+
 import initToolTip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";

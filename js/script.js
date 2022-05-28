@@ -3,7 +3,7 @@ import Accordion from "./modules/accordion-animacao.js";
 import TabNav from "./modules/tabnav.js";
 import HandleText from "./modules/handle-text.js";
 
-import initModal from "./modules/modal.js";
+import Modal from "./modules/modal.js";
 import initToolTip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
@@ -28,7 +28,14 @@ tabNav.init();
 const handleText = new HandleText('[data-handleText="text"]', "textomaior");
 handleText.init();
 
-initModal();
+const modal = new Modal(
+  '[data-modal="abrir"]',
+  '[data-modal="fechar"]',
+  '[data-modal="container"]',
+  "ativo"
+);
+modal.init();
+
 initToolTip();
 initDropDownMenu();
 initMenuMobile();

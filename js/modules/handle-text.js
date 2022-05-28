@@ -23,5 +23,6 @@ export default class HandleText {
     if (this.text.length) {
       this.addHandleTextEvent();
     }
+    return this;
   }
 }

@@ -3,8 +3,8 @@ import Accordion from "./modules/accordion-animacao.js";
 import TabNav from "./modules/tabnav.js";
 import HandleText from "./modules/handle-text.js";
 import Modal from "./modules/modal.js";
+import Tooltip from "./modules/tooltip.js";
 
-import initToolTip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
@@ -36,7 +36,9 @@ const modal = new Modal(
 );
 modal.init();
 
-initToolTip();
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
+
 initDropDownMenu();
 initMenuMobile();
 initFuncionamento();

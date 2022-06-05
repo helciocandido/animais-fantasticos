@@ -1,4 +1,4 @@
-# Animais Fantasticos
+# Animais Fantásticos
 <p align="center">
   <a href="https://helciocandido.github.io/animais-fantasticos/"><img src="https://i.imgur.com/PmyknGv.png" alt="Animais Fantásticos"></a>
 </p>
